@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <link rel="stylesheet" href="weather.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar">
+            <div class="left">
+                <h3>Weather</h3>
+            </div>
+            <div class="right">
+                <ul class="navlist">
+                    <li class="home">Home</li>
+                    <li class="about">About</li>
+                    <li class="city">
+                        <label for="City">City :</label>
+                        <select name="City" id="cityoption">
+                            <option value="MUZAFFARPUR">MUZAFFARPUR</option>
+                            <option value="DELHI">DELHI</option>
+                            <option value="KOLKATA">KOLKATA</option>
+                            <option value="Bengaluru">BENGALURU</option>
+                        </select>
+                    </li>
+                    <li class="search">
+                        <input id="inputcity" type="text" placeholder="Enter City">
+                        <button class="searchbtn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <div class="sec">
+        <div class="firstsec">
+            <div class="degree">
+
+                <div class="leftbox">
+                    <div class="location"><span><i class="fa-solid fa-location-dot"></i></span> <span
+                            id="location">City</span></div>
+                    <div class="celsius"><span id="celsius">28</span><span id="celunit">°C</span> <img class="currentweather-icon"> </div>
+                </div>
+
+                <div class="weatherbox">
+                    <div class="box"><i class="fa-solid fa-wind"></i> Wind <p id="wind">12</p>
+                    </div>
+                    <div class="box"><i class="fa-solid fa-droplet"></i> Humidity <p id="humidity">12 </p>
+                    </div>
+                    <div class="box"><i class="fa-regular fa-face-grin-beam"></i> Feels Like <p id="feelslike">12</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+                <p>5-Day Forecast</p>
+                <div class="cards">
+                    <p class="days" id="day1">Mon</p>
+                    <img class="weather-icon">
+                    <p class="maxTemp">30</p>
+                    <p class="minTemp">20</p>
+                </div>
+                <div class="cards">
+                    <p class="days" id="day2">Mon</p>
+                    <img class="weather-icon">
+                    <p class="maxTemp">30</p>
+                    <p class="minTemp">20</p>
+                </div>
+                <div class="cards">
+                    <p class="days" id="day3">Mon</p>
+                    <img class="weather-icon">
+                    <p class="maxTemp">30</p>
+                    <p class="minTemp">20</p>
+                </div>
+                <div class="cards">
+                    <p class="days" id="day4">Mon</p>
+                    <img class="weather-icon">
+                    <p class="maxTemp">30</p>
+                    <p class="minTemp">20</p>
+                </div>
+                <div class="cards">
+                    <p class="days" id="day5">Mon</p>
+                   <img class="weather-icon">
+                    <p class="maxTemp">30</p>
+                    <p class="minTemp">20</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="secondsec">
+            <div class="secondsecbox">
+                <div class="boxes">Max Temp. <p id="boxmaxtemp"> 12 </p>
+                </div>
+                <div class="boxes">Min Temp. <p id="boxmintemp"> 12 </p>
+                </div>
+                <div class="boxes">Precipitation <p id="precipitation"> 12 </p>
+                </div>
+                <div class="boxes">Rain <p id="rain">12</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="wearher.js"></script>
+    <script src="weathericons.js"></script>
+    
+</body>
+
+</html>
