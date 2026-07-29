@@ -21,7 +21,7 @@
 }
 
 .right {
-    flex: 4;
+    flex: 3;
 }
 
 .navbar ul {
@@ -46,19 +46,26 @@ h3 {
     font-size: 2.3rem;
 }
 
-.search {
+.searchbtn {
     height: 2rem;
     width: 2rem;
-    border-radius: 3px;
+    border-radius: 5px;
+    cursor: pointer;
 }
-
+#inputcity{
+    height:1.5rem ;
+    text-align: center;
+    border-radius: 5px;
+}
 .sec {
+
+     height: 88vh;
+    max-width: 100vw;
     background-image: url("sky2.png");
     background-size: cover;
     display: flex;
     flex-direction: column;
-    height: 90vh;
-    max-width: 100vw;
+   
 }
 
 .firstsec {
