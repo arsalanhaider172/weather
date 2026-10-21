@@ -6,7 +6,7 @@
 
 .navbar {
     background-color: #1E293B;
-    /* width: 100vw; */
+    width: 100%;
     display: flex;
     color: #fdfdfd;
 }
@@ -30,7 +30,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 20px;
+    gap: 1.25rem;
 
 }
 
@@ -60,7 +60,7 @@ h3 {
 .sec {
 
      height: 88vh;
-    max-width: 100vw;
+    width: 100%;
     background-image: url("sky2.png");
     background-size: cover;
     display: flex;
@@ -69,7 +69,7 @@ h3 {
 }
 
 .firstsec {
-    flex: 3;
+    flex: 4;
     padding-right: 5rem;
     padding-left: 5rem;
     display: flex;
@@ -77,7 +77,7 @@ h3 {
 }
 
 .secondsec {
-    flex: 4;
+    flex: 3;
     padding-right: 5rem;
     padding-left: 5rem;
 }
@@ -94,7 +94,7 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 2px;
-    margin-top: 45px;
+    margin-top: 3rem;
     position: relative;
     right: 130px;
     background-color: #ffffff28;
@@ -209,4 +209,392 @@ h3 {
     left: 3.5rem;
     height: 6rem;
     width: 6rem;
+}
+
+
+
+
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+    .firstsec,
+    .secondsec {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .card {
+        right: 0;
+        max-width: 16rem;
+    }
+
+    .secondsecbox {
+        width: min(40rem, 100%);
+    }
+
+    #celsius {
+        font-size: 7rem;
+    }
+
+    .navbar ul {
+        gap: 12px;
+    }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+        width: 100%;
+        min-height: 75px;
+        padding: 10px 12px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .left {
+        flex: 1;
+        min-width: 100px;
+        margin-left: 0;
+        padding: 5px;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    .right {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .navbar ul {
+        height: auto;
+        padding: 5px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navlist li {
+        font-size: 0.9rem;
+    }
+
+    #cityoption {
+        max-width: 145px;
+        width: 100%;
+        font-size: 0.8rem;
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    #inputcity {
+        width: 120px;
+        max-width: 100%;
+        min-width: 0;
+        height: 2rem;
+        font-size: 0.85rem;
+    }
+
+    .searchbtn {
+        flex-shrink: 0;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    /* Main background */
+    .sec {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+    }
+
+    /* Current weather + forecast */
+    .firstsec {
+        flex: none;
+        width: 100%;
+        padding: 25px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .degree {
+        flex: none;
+        width: 100%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftbox {
+        width: 100%;
+        text-align: center;
+    }
+
+    .location {
+        position: static;
+        margin-top: 10px;
+        font-size: 1.3rem;
+    }
+
+    .location i {
+        margin-right: 8px;
+    }
+
+    .celsius {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: 15px;
+    }
+
+    #celsius {
+        position: static;
+        font-size: clamp(5rem, 20vw, 7rem);
+        line-height: 1.1;
+    }
+
+    #celunit {
+        position: static;
+        font-size: 1.7rem;
+        align-self: flex-start;
+        margin-top: 12px;
+    }
+
+    .currentweather-icon {
+        position: static;
+        width: 75px;
+        height: 75px;
+        object-fit: contain;
+    }
+
+    /* Wind, humidity, feels like */
+    .weatherbox {
+        position: static;
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        margin: 25px auto 0;
+        padding: 10px 5px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: stretch;
+        gap: 7px;
+    }
+
+    .box {
+        width: 100%;
+        height: auto;
+        min-height: 85px;
+        padding: 10px 3px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.85rem;
+        overflow-wrap: anywhere;
+    }
+
+    #wind,
+    #humidity,
+    #feelslike {
+        margin-top: 2px;
+        font-size: 1.1rem;
+    }
+
+    /* 5-day forecast */
+    .card {
+        position: static;
+        flex: none;
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        margin: 0 auto;
+        padding: 12px;
+        font-size: 1rem;
+        gap: 8px;
+    }
+
+    .card > p:first-child {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .card .cards {
+        flex: none;
+        width: 100%;
+        min-height: 55px;
+        margin-top: 0;
+        padding: 8px 5px;
+        display: grid;
+        grid-template-columns: 1fr 40px 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        gap: 5px;
+        font-size: 0.95rem;
+    }
+
+    .card .cards:hover {
+        transform: translateY(-2px);
+    }
+
+    .weather-icon {
+        width: 30px;
+        height: 30px;
+        max-width: 30px;
+        max-height: 30px;
+        object-fit: contain;
+    }
+
+    /* Bottom temperature details */
+    .secondsec {
+        flex: none;
+        width: 100%;
+        padding: 0 15px 25px;
+    }
+
+    .secondsecbox {
+        position: static;
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        margin: 0 auto;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .boxes {
+        width: 100%;
+        height: auto;
+        min-height: 80px;
+        padding: 12px 5px;
+        font-size: 0.95rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        overflow-wrap: anywhere;
+    }
+
+    .boxes p {
+        padding-top: 0;
+        font-size: 1.2rem;
+    }
+}
+
+/* =========================
+   SMALL MOBILE SCREENS
+========================= */
+@media (max-width: 400px) {
+
+    .navbar {
+        justify-content: space-evenly;
+    }
+
+    .left {
+        flex: none;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .right {
+        flex: none;
+        width: 100%;
+    }
+
+    .navbar ul {
+        justify-content: center;
+    }
+
+    .search {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #inputcity {
+        width: 70%;
+    }
+
+    #cityoption {
+        max-width: 180px;
+    }
+
+    .firstsec {
+        padding: 20px 10px;
+    }
+
+    .weatherbox {
+        gap: 5px;
+        padding: 8px 4px;
+    }
+
+    .box {
+        font-size: 0.75rem;
+        min-height: 80px;
+    }
+
+    #wind,
+    #humidity,
+    #feelslike {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 9px;
+    }
+
+    .card .cards {
+        grid-template-columns: 1fr 30px 1fr 1fr;
+        font-size: 0.85rem;
+    }
+
+    .weather-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .secondsec {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .boxes {
+        font-size: 0.8rem;
+    }
+
+    .boxes p {
+        font-size: 1.1rem;
+    }
 }

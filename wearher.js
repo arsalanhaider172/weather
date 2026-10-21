@@ -45,19 +45,19 @@ async function getWeatherByCity(cityname) {
     precipitation.innerText = `${Math.round(weatherdata.current.precipitation)} mm`;
     rain.innerText = `${Math.round(weatherdata.current.rain)} mm`;
 
-  for (let i = 0; i < 5; i++) {
-    const date = new Date(weatherdata.daily.time[i+1]);
+    for (let i = 0; i < 5; i++) {
+        const date = new Date(weatherdata.daily.time[i + 1]);
 
-    days[i].innerText = date.toLocaleDateString("en-US", {
-        weekday: "short"
-    });
-     maxTemps[i].innerText = `${Math.round(weatherdata.daily.temperature_2m_max[i+1])}°C`;
-    minTemps[i].innerText = `${Math.round(weatherdata.daily.temperature_2m_min[i+1])}°C`;
+        days[i].innerText = date.toLocaleDateString("en-US", {
+            weekday: "short"
+        });
+        maxTemps[i].innerText = `${Math.round(weatherdata.daily.temperature_2m_max[i + 1])}°C`;
+        minTemps[i].innerText = `${Math.round(weatherdata.daily.temperature_2m_min[i + 1])}°C`;
 
-    icons[i].src = weatherIcons[weatherdata.daily.weather_code[i+1]];   
-}
+        icons[i].src = weatherIcons[weatherdata.daily.weather_code[i + 1]];
+    }
 
-currenticon.src = weatherIcons[weatherdata.current.weather_code];
+    currenticon.src = weatherIcons[weatherdata.current.weather_code];
 
     console.log(weatherdata)
 } getWeatherByCity("muzaffarpur");
@@ -66,7 +66,7 @@ searchcity.addEventListener("click", () => {
     const cityname = document.querySelector("#inputcity").value;
     getWeatherByCity(cityname);
 
-    
+
 });
 const inputCity = document.querySelector("#inputcity");
 
